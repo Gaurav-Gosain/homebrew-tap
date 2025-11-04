@@ -3,7 +3,7 @@ cask "tuios" do
   name "tuios"
   desc "Terminal UI Operating System - A terminal-based window manager with tmux-style keybindings"
   homepage "https://github.com/Gaurav-Gosain/tuios"
-  version "0.2.1"
+  version "0.2.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "tuios" do
   on_macos do
     on_intel do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "ee15b763f809f7d21eb4bcb06a4f3be826ca4f33582faf6d191869b863f1a734"
+      sha256 "5ad8eedba2c55eb2831505a93d33a043257942a6fc5f0d9454af41401c17dd20"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_arm64.tar.gz"
-      sha256 "8e1a3daaf9df9871d2b277f5d0ad2431d362c815edf7b062719c3be039b1622b"
+      sha256 "5e0e747e1393f43467fba686b46154d51d53de38d18b953016e51c50e87374ce"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_x86_64.tar.gz"
-      sha256 "f90596c2bea4d1cd4f02b924d1bd7793359cc79896e352bb508ebd5eb75c81d8"
+      sha256 "2f0b7495b8a5e1c86cc635345070d49a806b8ed03a24d3f1be0859c8084da308"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_arm64.tar.gz"
-      sha256 "1d03a621835f5d2b330158255b48747fad2e21aa6f075f3a0bacc05f5f17c5d3"
+      sha256 "08867d21a6c56029e9307befcee72b2c48b771119def7415531c3ca0e7dd9ee2"
     end
   end
 
