@@ -3,7 +3,7 @@ cask "tuios-web" do
   name "tuios-web"
   desc "Web terminal server for TUIOS - Serves TUIOS through the browser"
   homepage "https://github.com/Gaurav-Gosain/tuios"
-  version "0.5.0"
+  version "0.5.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "tuios-web" do
   on_macos do
     on_intel do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios-web_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "3df5e7c2d973ca7d731da6c0146d0b497335d20bfce3ffb25fabebebf4ea7385"
+      sha256 "24db867fcb474f1f95a3a5a5b50535cf8d21b60cc6bbb706bf020b5233ef8d60"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios-web_#{version}_Darwin_arm64.tar.gz"
-      sha256 "9a164b090a4089216dd50f3e41e07db7653d52a53b59e0ec0cd1f75049e7bcae"
+      sha256 "c7f96cabd7c982c660463c3dea9cf1202cde87ddb75341ffdf2a516266d11aef"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios-web_#{version}_Linux_x86_64.tar.gz"
-      sha256 "2c37ea8b7adc63dcdec70fd8011752a266c5b9c8e26c3a84bc89623d8b94678a"
+      sha256 "f967ef89b1c71a65352693da94215abd18c94c5a58afd57732b0b22b3b63a2ff"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios-web_#{version}_Linux_arm64.tar.gz"
-      sha256 "6489f277f2c36a5766de0aaf15b673b2f0fd333523f3d5f19f040a2e32dae06c"
+      sha256 "2f91bc1b9641b0fffee8972e78bbc4a3c3c64d2a877b98177ef13abf5e1208e6"
     end
   end
 
