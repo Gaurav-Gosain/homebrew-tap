@@ -3,7 +3,7 @@ cask "scraped" do
   name "scraped"
   desc "A fast, parallelized CLI tool that scrapes web pages and converts them to markdown"
   homepage "https://github.com/Gaurav-Gosain/scraped"
-  version "0.2.0"
+  version "0.2.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "scraped" do
   on_macos do
     on_intel do
       url "https://github.com/Gaurav-Gosain/scraped/releases/download/v#{version}/scraped_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "83d9b203ce24c3d74b712a7ddbda62f92881a22360a824e29adb587063e4c267"
+      sha256 "268927f314176fc39b43ec0a866efba7c8565db4b1c0652d4ee788e23fc158d1"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/scraped/releases/download/v#{version}/scraped_#{version}_Darwin_arm64.tar.gz"
-      sha256 "3b76e53764fd2bb32dd25fe9e5180f7bebfdbf1650658b120a6c1c54d6e35571"
+      sha256 "25634f4949a1d0611c6d5680c56ee1f3d9ba5969d5428ea9645e0156258c82cd"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gaurav-Gosain/scraped/releases/download/v#{version}/scraped_#{version}_Linux_x86_64.tar.gz"
-      sha256 "d88c95afefa95af603c5e84b65c403419cd69e868a800b098d90a37140daa933"
+      sha256 "6cc00f4eedd7e1579ae0478abf58938c8ed136c0cf353a6e56e6b25466eef4a3"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/scraped/releases/download/v#{version}/scraped_#{version}_Linux_arm64.tar.gz"
-      sha256 "35fb1072f7a84f9f6feef1e9ac3f48eb3bf83cabe2ce91000e9e3b574cf1bcc2"
+      sha256 "6c72a65eaf3ed664823ced8306df2359dca541d7cd0e9b252c847130174c6668"
     end
   end
 
