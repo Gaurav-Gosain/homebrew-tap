@@ -3,7 +3,7 @@ cask "streamd" do
   name "streamd"
   desc "A CLI tool that renders streamed LLM output as beautiful markdown in the terminal"
   homepage "https://github.com/Gaurav-Gosain/streamd"
-  version "0.2.0"
+  version "0.2.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "streamd" do
   on_macos do
     on_intel do
       url "https://github.com/Gaurav-Gosain/streamd/releases/download/v#{version}/streamd_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "521eb6e43ebcbf1d8dc491f59fc52fb536fb236ed6bf9464d4a618fceb5b631d"
+      sha256 "b630462a8b03862bab60da06f69f2ffb4d307b5054fedf942d8e6bf29947276a"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/streamd/releases/download/v#{version}/streamd_#{version}_Darwin_arm64.tar.gz"
-      sha256 "4de73b5689c9ef1d86c6ed25a18ffe93f7a728eb9ef014bc0b4cf008f9d2f0c4"
+      sha256 "2f3e9648e754878e54a58bc45f5256920878f1d6905b256be681cb6e09111779"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Gaurav-Gosain/streamd/releases/download/v#{version}/streamd_#{version}_Linux_x86_64.tar.gz"
-      sha256 "22a948ad8aa028d87667e29aa0c86ff67cf2656fdc1069e62b2a08db6cf664d0"
+      sha256 "ab95088ced4c1df85938109fabfaa20caad8a10e193cd1a88d960fde39b03641"
     end
     on_arm do
       url "https://github.com/Gaurav-Gosain/streamd/releases/download/v#{version}/streamd_#{version}_Linux_arm64.tar.gz"
-      sha256 "abe76a9ac386838968e7205806bb30a16d513316491551ef4e111676c69a7df1"
+      sha256 "c1d6474c39f923b38009056991fa0940c6d7fbe3c922f83820352860b79f7a06"
     end
   end
 
