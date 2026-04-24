@@ -11,7 +11,7 @@ class Golars < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.0/golars_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "4ddc05c95ebbe7d5cf97703e46e21f06bee36f1313ca92c6e86444f9e25fe991"
+      sha256 "93cbbb54ee6125857648abc983b6ba7d236e4448a9b28c408e2f02786a48b465"
 
       define_method(:install) do
         bin.install "golars"
@@ -21,7 +21,7 @@ class Golars < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.0/golars_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "480f8f1557ebe1602acf634ea106c90045180855f008e06c3134539f26d4f0a2"
+      sha256 "b571bcd9c31f2be46c7599f0b389eebb5491251220267c482712aa1abd6758d3"
 
       define_method(:install) do
         bin.install "golars"
@@ -34,7 +34,7 @@ class Golars < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.0/golars_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "f56c0315ddcc08164d1d0f9c9937a6c81f70598aa5d0f917ff9a4d2f0aebf995"
+      sha256 "820fe70e0e56aef0cca8a65ccaf8e172795cde011baeb470f6a8ef681aec0f2d"
       define_method(:install) do
         bin.install "golars"
         bin.install "golars-lsp"
@@ -43,7 +43,7 @@ class Golars < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.0/golars_0.1.0_Linux_arm64.tar.gz"
-      sha256 "0c248aacac0297660f878492f0539aefbeeedee98a926f00ba72607aa7451461"
+      sha256 "d078711385734071c85b86acdb28e87252e468c866f577f44c3f05d2e60464e5"
       define_method(:install) do
         bin.install "golars"
         bin.install "golars-lsp"
