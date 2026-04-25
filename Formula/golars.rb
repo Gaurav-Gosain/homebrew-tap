@@ -5,13 +5,13 @@
 class Golars < Formula
   desc "Pure-Go DataFrames modeled on polars. Eager + lazy + streaming, no cgo."
   homepage "https://golars.gaurav.zip"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.7/golars_0.1.7_Darwin_x86_64.tar.gz"
-      sha256 "5143c4ea8468e116d7e40ffe89cb377e7ebcac0e61769660f968f87af7e6791a"
+      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.8/golars_0.1.8_Darwin_x86_64.tar.gz"
+      sha256 "8b8ac1a3709c855be61151dde27a4ab53dc199770cab96d98e4798f3be6748bb"
 
       define_method(:install) do
         bin.install "golars"
@@ -21,8 +21,8 @@ class Golars < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.7/golars_0.1.7_Darwin_arm64.tar.gz"
-      sha256 "63046ab21406b1d70b27c85c3cdb1647832cd19f7975dd73411a2f4a30afa1ca"
+      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.8/golars_0.1.8_Darwin_arm64.tar.gz"
+      sha256 "1651006c532678ebbaf4ca528f0b07ccf6d78e1f02c3082445293bbb6bb8a643"
 
       define_method(:install) do
         bin.install "golars"
@@ -35,8 +35,8 @@ class Golars < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.7/golars_0.1.7_Linux_x86_64.tar.gz"
-      sha256 "c9cece06363528c0749bbf14fb67c6d4f392e814d8fcf97d320212867ca84cbe"
+      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.8/golars_0.1.8_Linux_x86_64.tar.gz"
+      sha256 "794b8eac5d559e89581218a1b01bdd9fd903d2d5c1d095d943223f9117f9abfd"
       define_method(:install) do
         bin.install "golars"
         bin.install "golars-lsp"
@@ -45,8 +45,8 @@ class Golars < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.7/golars_0.1.7_Linux_arm64.tar.gz"
-      sha256 "fc5910b8e274b119254fedc1f46e7504781950831890d2e60e6039457b2c1f33"
+      url "https://github.com/Gaurav-Gosain/golars/releases/download/v0.1.8/golars_0.1.8_Linux_arm64.tar.gz"
+      sha256 "6391438950c65f90977c935574792e45b561b60df26581b822f99d58049b889d"
       define_method(:install) do
         bin.install "golars"
         bin.install "golars-lsp"
