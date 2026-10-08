@@ -1,0 +1,52 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  HOMEBREW_NO_ANALYTICS: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+  # GoReleaser writes every file in this tap, and the next release overwrites
+  # any manual fix. These cops flag parts of that generated output.
+  # - Cask/StanzaOrder, Cask/StanzaGrouping: GoReleaser picks the stanza
+  #   order. No project config changes it.
+  # - Cask/Desc, FormulaAudit/Desc: the desc strings come from the projects'
+  #   .goreleaser.yml files (tuios, scraped, streamd, cider, golars). Remove
+  #   these two when those strings pass.
+  # - Cask/InstallSteps, Layout/ArgumentAlignment: the cider postflight block
+  #   comes from cider's .goreleaser.yml. Remove these when it uses
+  #   postflight_steps.
+  STYLE_EXCEPT_COPS: Cask/StanzaOrder,Cask/StanzaGrouping,Cask/Desc,FormulaAudit/Desc,Cask/InstallSteps,Layout/ArgumentAlignment
+  # The tuios cask has the same token as the homebrew-core tuios formula. The
+  # tuios release config keeps the cask on purpose and marks it deprecated.
+  AUDIT_EXCEPT: token_conflicts
+
+jobs:
+  tap:
+    # macos-latest is Apple silicon. cider ships only for that platform and
+    # has no depends_on :macos, so a Linux runner fails its audit.
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew and this tap
+        uses: Homebrew/actions/setup-homebrew@main
+
+      # Homebrew skips the formulae and casks of a tap it does not trust.
+      - name: Trust this tap
+        run: brew trust gaurav-gosain/tap
+
+      - name: brew style
+        run: brew style --except-cops="$STYLE_EXCEPT_COPS" gaurav-gosain/tap
+
+      - name: brew audit --cask
+        # --tap also audits the formula, so name each cask instead.
+        run: |
+          casks=()
+          for f in "$(brew --repository gaurav-gosain/tap)"/Casks/*.rb; do
+            casks+=("gaurav-gosain/tap/$(basename "$f" .rb)")
+          done
+          brew audit --cask --except="$AUDIT_EXCEPT" "${casks[@]}"
