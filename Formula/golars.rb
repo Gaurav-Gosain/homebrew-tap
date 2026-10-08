@@ -57,6 +57,6 @@ class Golars < Formula
   end
 
   test do
-    system "#{bin}/golars", "version"
+    assert_match version.to_s, shell_output("#{bin}/golars version")
   end
 end
