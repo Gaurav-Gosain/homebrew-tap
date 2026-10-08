@@ -46,10 +46,16 @@ jobs:
         run: brew style --except-cops="$STYLE_EXCEPT_COPS" gaurav-gosain/tap
 
       - name: brew audit --cask
-        # --tap also audits the formula, so name each cask instead.
+        # --tap also audits the formula, so name each cask instead. This runner
+        # is macOS, so a cask with only an on_linux download (tuios-ghostty)
+        # has no url here and is left out.
         run: |
           casks=()
           for f in "$(brew --repository gaurav-gosain/tap)"/Casks/*.rb; do
+            if grep -q 'on_linux' "$f" && ! grep -q 'on_macos' "$f"; then
+              echo "skip $(basename "$f" .rb): Linux only"
+              continue
+            fi
             casks+=("gaurav-gosain/tap/$(basename "$f" .rb)")
           done
           brew audit --cask --except="$AUDIT_EXCEPT" "${casks[@]}"
