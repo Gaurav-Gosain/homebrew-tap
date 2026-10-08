@@ -21,7 +21,9 @@ env:
   # - Cask/InstallSteps, Layout/ArgumentAlignment: the cider postflight block
   #   comes from cider's .goreleaser.yml. Remove these when it uses
   #   postflight_steps.
-  STYLE_EXCEPT_COPS: Cask/StanzaOrder,Cask/StanzaGrouping,Cask/Desc,FormulaAudit/Desc,Cask/InstallSteps,Layout/ArgumentAlignment
+  # GoReleaser writes the casks on every tuios release, so the cops that only
+  # fault its array layout are skipped here instead of fixed by hand.
+  STYLE_EXCEPT_COPS: Cask/StanzaOrder,Cask/StanzaGrouping,Cask/Desc,FormulaAudit/Desc,Cask/InstallSteps,Layout/ArgumentAlignment,Cask/ArrayAlphabetization,Layout/FirstArrayElementIndentation
   # The tuios cask has the same token as the homebrew-core tuios formula. The
   # tuios release config keeps the cask on purpose and marks it deprecated.
   AUDIT_EXCEPT: token_conflicts
