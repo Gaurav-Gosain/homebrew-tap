@@ -33,7 +33,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Set up Homebrew and this tap
-        uses: Homebrew/actions/setup-homebrew@main
+        # Pinned to the main branch commit of 2026-10-08.
+        uses: Homebrew/actions/setup-homebrew@9ffcbcc2c89631400988e8d4b1e3ac17dbbe3fe9
 
       # Homebrew skips the formulae and casks of a tap it does not trust.
       - name: Trust this tap
