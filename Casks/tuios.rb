@@ -8,25 +8,25 @@ cask "tuios" do
     end
   end
 
-  version "0.10.0"
+  version "0.10.1"
 
   on_macos do
     on_arm do
-      sha256 "3aacbdc3a45c46cdb9f7c052e1cc26de52b01ec82d44d9a6a59163d91fe71df8"
+      sha256 "302e28404b619e54891466be51b9b24818692d1d52fcd227c0042de2dc6ed019"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "befd4a1112641dbdda243a6a13eee6f080e430664cd89c41459143571bdc6346"
+      sha256 "69092c9d5a33f3d9d31700511072463fc7006f5b3bb966ef73a23106b092a383"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b74f60e69c94fd116fd8fc2b9dffc44fad5750395b77416c6d7815483510efac"
+      sha256 "538a9f240c153029375e6d24369b685316a00c04f8341306b07811f68c699c5d"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d1a63808639af8193db9c9b3440b24e0ded68a82dcbaa5981e1d571b3ecd3cd5"
+      sha256 "85a4bf339a9a6793e0b3d15abdccd9a96ca8d2ff76072007ec99be31f1a16a5f"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_x86_64.tar.gz"
     end
   end
