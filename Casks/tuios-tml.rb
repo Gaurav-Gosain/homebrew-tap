@@ -31,7 +31,7 @@ cask "tuios-tml" do
 
   name "tuios-tml"
   desc "Show TML documents in the terminal"
-  homepage "https://tuios.dev"
+  homepage "https://tuios.dev/"
 
   livecheck do
     skip "Auto-generated on release."

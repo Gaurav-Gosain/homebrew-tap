@@ -31,7 +31,7 @@ cask "tuios-plot" do
 
   name "tuios-plot"
   desc "Draw charts in the terminal from CSV, TSV or JSON"
-  homepage "https://tuios.dev"
+  homepage "https://tuios.dev/"
 
   livecheck do
     skip "Auto-generated on release."

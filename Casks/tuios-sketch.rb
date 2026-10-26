@@ -31,7 +31,7 @@ cask "tuios-sketch" do
 
   name "tuios-sketch"
   desc "Draw Mermaid diagrams in the terminal, or as SVG or PNG"
-  homepage "https://tuios.dev"
+  homepage "https://tuios.dev/"
 
   livecheck do
     skip "Auto-generated on release."
