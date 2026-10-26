@@ -6,25 +6,25 @@ cask "tuios-tml" do
     end
   end
 
-  version "0.11.0"
+  version "0.11.1"
 
   on_macos do
     on_arm do
-      sha256 "0d56c5e2e24a679de987930389496b87d71e8aa098a43871ab411ba753a22806"
+      sha256 "5eabade7ddeee0e5759bef583b59bf2ef5c3b4dc8ab64e7bfea832543efccf99"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tml_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "29cd118dde5cc279160bbb19abd2db5af588389199cf6d7fbf34fd6fc99bb704"
+      sha256 "a314e3d7dc8fe49d87cc1a5cec9b256fe92ba0fcbca0f2008c558224979db5f4"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tml_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "761ab7b5abdd812b9b607260bfba7d487d5d72aa13edd7c443a3866162a3da0d"
+      sha256 "a533d1cc4f4782be30f12fef1ef9339e81d7a88ef2d3cd99029c2288e3e7ec63"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tml_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c456c5299e0d5f71a4747d2bd37c7885dc309ea915d2617132a0cd021bbeae54"
+      sha256 "123032ee78951da98811e2515fc26304c4b2d0d71a3d1ada921f3b5ee6535e3a"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tml_#{version}_Linux_x86_64.tar.gz"
     end
   end
