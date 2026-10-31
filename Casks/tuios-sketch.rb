@@ -6,25 +6,25 @@ cask "tuios-sketch" do
     end
   end
 
-  version "0.12.0"
+  version "0.12.1"
 
   on_macos do
     on_arm do
-      sha256 "21adf83984310ce66369f1924790131b5af6ab7a65c229f7f29242d1d1b91551"
+      sha256 "d05ad3f12cdff2f965401fbead6d2ebbd342f2444044828957a460caa6dbbcc2"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/sketch_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "6be46d9834b35c14634a06ce341578ce1b01d1dc961d585e2dbc6ecd5a0d28ab"
+      sha256 "6f46122b11a4c821d1413b66fff3fb6584a78a4b202e35f8f15d50b06c247081"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/sketch_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "73bf4dbf1780c8ac5ed9b78deb429f9f60866593d4782ec7b83fb833a78f0e22"
+      sha256 "6e500cb6d0979a8287e1d379e65d34f2aa031da9a7e8cfeeb2aab18b41306c78"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/sketch_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a3f37d569be11f92d91432120bea2e53cbe7ccb55f07627670e7f3b29e0c6c2f"
+      sha256 "85cfe0a417fee0e51fbc0b75c6d56dfba690a77e5ea24024e23a89c3ca8bccdb"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/sketch_#{version}_Linux_x86_64.tar.gz"
     end
   end
