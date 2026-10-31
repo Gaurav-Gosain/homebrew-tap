@@ -6,25 +6,25 @@ cask "tuios-plot" do
     end
   end
 
-  version "0.12.0"
+  version "0.12.1"
 
   on_macos do
     on_arm do
-      sha256 "580e955d36fe0f039e68858a1610ded3e518af7136ff0f6d30da4fdf3b1dd480"
+      sha256 "fad0ff84bd05fb09521e0946178b6848d04c1dea53fc07c5759254d729ea424f"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tplot_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "9dd9df52aced38c8b64727d47871eb0a76d888fac4e725a6cdadde5c2d4f852a"
+      sha256 "81221e809eaa032001836d3009d88b301c6cb3595dbdf105214ad4373b84f7f3"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tplot_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "d179af017f1bebdc6860298c28f2cfd9f1b6619673547b635aa160b3704338e8"
+      sha256 "84174fc009974b5717d6db60f93e7e1d69ae94e3c6fcab247a29144059398fa0"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tplot_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "220767263ad23751a3a5fa642488281e7a423c8d65fa43528fec986cefea301e"
+      sha256 "923e2260961bfabc0ac6758751de391ba64fda6f0365b0015c26762751152a7f"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tplot_#{version}_Linux_x86_64.tar.gz"
     end
   end
