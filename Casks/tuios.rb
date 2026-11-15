@@ -8,25 +8,25 @@ cask "tuios" do
     end
   end
 
-  version "0.13.1"
+  version "0.13.2"
 
   on_macos do
     on_arm do
-      sha256 "80f50555c942ab760d4117406ab95f2734e728fc13c147a420727e171727fe4a"
+      sha256 "f322c4362eca6e43e2848729a1d157a6cedf2695f8aabcc3d1f11bb7195a0fce"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "899561e862b83ea9bbd0d56fec687b5aaeea272639d5b570367fdd8a2f9a5683"
+      sha256 "39302e9ce15e49503917d535ba908593abf58cf16032d33c2a2dd212140c81fc"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "5b17a102285614102136c21c1b43d39b2a85606900676576eeb9f5e68bde548f"
+      sha256 "c9ea2e2d2229e116c5cb587ee1fbaffbaa35ce60e08237e216cb1299d405edee"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c2cd5a5b9a025f9c94d0192547718e088849a8fc94ad4cfd2c382bcf5714bf6b"
+      sha256 "36120ad73a36fbc6195d4dfeef403920df4dd250800c759a5e5137d7e478668c"
       url "https://github.com/Gaurav-Gosain/tuios/releases/download/v#{version}/tuios_#{version}_Linux_x86_64.tar.gz"
     end
   end
@@ -44,7 +44,7 @@ cask "tuios" do
 
   binary "tuios"
 
-  # No zap stanza required
+  zap :not_required
 
   caveats <<~EOS
     The tuios cask is deprecated. Homebrew core has tuios as a formula.
